@@ -1,1 +1,41 @@
+html {
+    display: flex;
+    flex-basis: auto;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: ghostwhite;
+    background-color: black;
+}
 
+.top {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#pic {
+    width: 50px;
+    height: auto;
+}
+
+.movies-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 85vw;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loadBtn {
+    display: none;
+}
