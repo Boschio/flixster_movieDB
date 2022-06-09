@@ -7,6 +7,7 @@ let movieArea = document.querySelector(".movies-area")
 let button = document.getElementById("search");
 let moreButton = document.getElementById("loadBtn");
 let results;
+let page = 1;
 
 // pages can be ++ whenever load more button is pressed
 
@@ -20,24 +21,29 @@ movieForm.addEventListener("submit", (event) => {
 });
 
 moreButton.addEventListener("click", () => {
-
+    page++;
     getResults(results);
 
 });
 
 async function getResults(event) {
-    let response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+    let response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`);
     console.log(response);
     let responseData = await response.json();
     console.log(responseData);
-    //responseData.results.foreach((e) => {
-        displayResults(responseData.results[1]);
-    //})
+
+    for (let i=0;i<responseData.results.length;i++) {
+        displayResults(responseData.results[i]);
+    }
 }
 
 function displayResults(e) {
     movieArea.innerHTML += `
-        <p>${e.title}"</p>
-        <img id="test" src="https://boschio.github.io/flixster_starter/${e.poster_path}">
+        <div>
+            
+            <img id="poster" src="http://image.tmdb.org/t/p/w500/${e.poster_path}">
+            <p id = "rating">${e.vote_average}</p>
+            <p id = "title">${e.title}</p>
+        </div>
     `;
 }
