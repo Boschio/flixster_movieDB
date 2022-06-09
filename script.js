@@ -15,7 +15,7 @@ movieForm.addEventListener("submit", (event) => {
     event.preventDefault();
     movieArea.innerHTML = ``;
     results = document.querySelector('input').value;
-
+    page = 1;
     getResults(results);
     moreButton.style.display = "flex";
 });
