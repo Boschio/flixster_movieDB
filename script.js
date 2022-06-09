@@ -4,7 +4,7 @@ const API_KEY = '3ecab21081541b994be53f6076bcf782';
 // Variables
 let movieForm = document.getElementById("form");
 let moviesGrid = document.querySelector("#movies-grid")
-let button = document.getElementById("search");
+let searchButton = document.getElementById("search");
 let moreButton = document.getElementById("load-more-movies-btn");
 let closeButton = document.getElementById("close-search-btn");
 let results;
@@ -27,21 +27,23 @@ moreButton.addEventListener("click", () => {
     } else {
         searchMovies(results);
     }
+    closeButton.style.display = "flex";
 });
 
 closeButton.addEventListener("click", (event) => {
     event.preventDefault();
     moviesGrid.innerHTML = ``;
     page = 1;
+    x = true;
     loadNowPlaying();
     closeButton.style.display = "none";
 })
 
-async function loadNowPlaying(event) {
+async function loadNowPlaying() {
     let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=${page}`);
     // console.log(response);
     let responseData = await response.json();
-    // console.log(responseData);
+    console.log(responseData);
 
     for (let i=0;i<responseData.results.length;i++) {
         displayResults(responseData.results[i]);
