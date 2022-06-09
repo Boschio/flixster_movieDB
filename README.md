@@ -2,9 +2,9 @@
 
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **James A. Bosch**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **5** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](https://boschio.github.io/flixster_starter/)
 
