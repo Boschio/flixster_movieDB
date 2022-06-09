@@ -23,11 +23,18 @@ html {
     height: auto;
 }
 
-.movies-area {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 85vw;
+#movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,510px);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-auto-rows: auto;
+    justify-content: center;
+    width: 95vw;
+}
+
+.movie-poster {
+    max-width: 100%;
+    height: auto;
 }
 
 .more {
@@ -36,6 +43,9 @@ html {
     justify-content: center;
 }
 
-#loadBtn {
+#load-more-movies-btn {
+    display: flex;
+}
+#close-search-btn {
     display: none;
 }
