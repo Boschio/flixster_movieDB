@@ -38,6 +38,6 @@ async function getResults(event) {
 function displayResults(e) {
     movieArea.innerHTML += `
         <p>${e.title}"</p>
-        <img id="test" src="http://127.0.0.1:5500/index.html?GIFs=${e.poster_path}">
+        <img id="test" src="https://boschio.github.io/flixster_starter/${e.poster_path}">
     `;
 }
