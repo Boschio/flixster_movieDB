@@ -7,6 +7,8 @@ let moviesGrid = document.querySelector("#movies-grid")
 let searchButton = document.getElementById("search");
 let moreButton = document.getElementById("load-more-movies-btn");
 let closeButton = document.getElementById("close-search-btn");
+let topButton = document.getElementById("top-btn");
+let resultsHeader = document.querySelector(".results-header");
 let results;
 let page = 1;
 let x = true;
@@ -17,6 +19,7 @@ movieForm.addEventListener("submit", (event) => {
     results = document.querySelector('input').value;
     page = 1;
     searchMovies(results);
+    resultsHeader.textContent = "Results for '" + results + "'";
     closeButton.style.display = "flex";
 });
 
@@ -36,8 +39,16 @@ closeButton.addEventListener("click", (event) => {
     page = 1;
     x = true;
     loadNowPlaying();
+    resultsHeader.textContent = "Now Playing";
     closeButton.style.display = "none";
-})
+});
+
+topButton.addEventListener("click", () => {
+    document.documentElement.scrollTo({
+        top:0,
+        behavior: "smooth"
+    });
+});
 
 async function loadNowPlaying() {
     let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=${page}`);
@@ -66,8 +77,11 @@ function displayResults(e) {
     moviesGrid.innerHTML += `
         <div class="movie-card">
             <img class="movie-poster" src="http://image.tmdb.org/t/p/w500${e.poster_path}">
-            <p class="movie-votes">${e.vote_average}</p>
-            <p class="movie-title">${e.title}</p>
+            <div class="movie-info">
+                <p class="movie-votes">Rating: ${e.vote_average} / 10</p>
+                <p class="movie-title">${e.title}</p>
+            </div>
+            
         </div>
     `;
 }

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
     <title>Flixster</title>
 </head>
 <body>
@@ -13,14 +16,17 @@
             <img id="pic" src="popcorn.png"/>
             <h1>Flixster</h1>
         </div>
-        
-        <form id="form">
-            <label>Search Movies: </label>
-            <input type="text" id="search-input" name="movies"/>
-            <button id="search">Search</button>
-        </form>
+        <div class="search-box">
+            <form id="form">
+                <label>Search Movies: </label>
+                <input type="text" id="search-input" name="movies"/>
+                <button id="search">Search</button>
+            </form>
+        </div>
     </div>
-    
+    <div>
+        <h1 class="results-header">Now Playing</h1>
+    </div>
     
 
     <div id="movies-grid">
@@ -29,6 +35,7 @@
     <div class="more">
         <button id="load-more-movies-btn">Load More</button>
         <button id="close-search-btn">Close Search</button>
+        <button id="top-btn">Top</button>
     </div>
     <script src="script.js"></script>
 </body>
