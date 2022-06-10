@@ -5,7 +5,7 @@ Submitted by: **James A. Bosch**
 
 Estimated time spent: **12** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](https://boschio.github.io/flixster_starter/)
+Deployed Application (optional): [Flixster Deployed Site](https://boschio.github.io/flixster_movieDB/)
 
 ### Application Features
 
