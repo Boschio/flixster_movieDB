@@ -41,7 +41,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://boschio.github
 
 ### Walkthrough Video
 
-`http://g.recordit.co/BRwwpNusQ8.gif`
+![Flixster walkthrough](flixster-preview.gif)
 
 ### Reflection
 
