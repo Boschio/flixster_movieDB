@@ -3,7 +3,7 @@
 
 Submitted by: **James A. Bosch**
 
-Estimated time spent: **12** hours spent in total
+Estimated time spent: **15** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](https://boschio.github.io/flixster_movieDB/)
 
