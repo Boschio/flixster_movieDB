@@ -124,6 +124,7 @@ function moviePopupWindow(movieDetailsData, movieVideoInfoData) {
 window.onclick = function(event) {
     if (event.target == moviePopup || document.querySelector(".video-container") == event.target) {
         moviePopup.style.display = "none";
+        moviePopup.innerHTML = ``;
     }
   }
 
