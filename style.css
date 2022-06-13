@@ -108,6 +108,9 @@ input {
 
 .movie-info-container {
     background-color: rgba(0, 0, 0, 0.725);
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px; 
     color: white;
     width: 50vh;
     height: auto;
